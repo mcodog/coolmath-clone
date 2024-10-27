@@ -1,42 +1,42 @@
-const canvas = document.getElementById('waveCanvas2');
-const ctx = canvas.getContext('2d');
+const canvas2 = document.getElementById('waveCanvas2');
+const ctx2 = canvas2.getContext('2d');
 
-let time = 0;
+let time2 = 0;
 
 // Parameters for the wave
-const amplitude = 10; // Reduced amplitude for flatter waves
-const frequencies = [0.02, 0.025, 0.03]; // Three different frequencies
-const fillColor = 'rgba(84, 171, 188, 0.3)'; // Semi-transparent color for the fill
+const amplitude2 = 10; // Reduced amplitude2 for flatter waves
+const frequencies2 = [0.02, 0.025, 0.03]; // Three different frequencies2
+const fillColor2 = 'rgba(38, 63, 84, 0.3)'; // Semi-transparent color for the fill
 
-function drawWave() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+function drawWave2() {
+    ctx2.clearRect(0, 0, canvas2.width, canvas2.height); // Clear the canvas2
 
-    // Draw waves with different frequencies
-    frequencies.forEach((frequency, index) => {
-        ctx.beginPath(); // Start a new path for each wave
-        ctx.moveTo(0, canvas.height / 2); // Start in the middle of the canvas height
+    // Draw waves with different frequencies2
+    frequencies2.forEach((frequency, index) => {
+        ctx2.beginPath(); // Start a new path for each wave
+        ctx2.moveTo(0, canvas2.height / 2); // Start in the middle of the canvas2 height
 
-        for (let x = 0; x < canvas.width; x++) {
+        for (let x = 0; x < canvas2.width; x++) {
             // Lower the y-position to flatten the wave further
-            const y = (canvas.height / 2) + (Math.sin((x + time) * frequency) * amplitude);
-            ctx.lineTo(x, y);
+            const y = (canvas2.height / 2) + (Math.sin((x + time) * frequency) * amplitude2);
+            ctx2.lineTo(x, y);
         }
 
         // Set stroke color based on index for different opacity
-        ctx.strokeStyle = `rgba(84, 171, 188, .25)`; // Change opacity
-        ctx.lineWidth = 2; // Width of the wave line
-        ctx.stroke(); // Draw the wave
+        ctx2.strokeStyle = `rgba(38, 63, 84, .25)`; // Change opacity
+        ctx2.lineWidth = 2; // Width of the wave line
+        ctx2.stroke(); // Draw the wave
 
         // Fill the area below the wave
-        ctx.lineTo(canvas.width, canvas.height); // Draw line to the right edge
-        ctx.lineTo(0, canvas.height); // Draw line to the left edge
-        ctx.closePath(); // Close the path
-        ctx.fillStyle = `rgba(84, 171, 188, .5)`; // Set fill color with different opacity
-        ctx.fill(); // Fill the area
+        ctx2.lineTo(canvas2.width, canvas2.height); // Draw line to the right edge
+        ctx2.lineTo(0, canvas2.height); // Draw line to the left edge
+        ctx2.closePath(); // Close the path
+        ctx2.fillStyle = `rgba(38, 63, 84, .5)`; // Set fill color with different opacity
+        ctx2.fill(); // Fill the area
     });
 
-    time += 0.5; // Increment time for animation
-    requestAnimationFrame(drawWave); // Call drawWave again for the next frame
+    time2 += 0.5; // Increment time for animation
+    requestAnimationFrame(drawWave2); // Call drawWave again for the next frame
 }
 
-drawWave(); // Start the wave animation
+drawWave2(); // Start the wave animation
