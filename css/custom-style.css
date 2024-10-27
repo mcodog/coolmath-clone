@@ -1,157 +1,116 @@
 :root {
-    --primary-color: #53c097;
-    --secondary-color: #9cd5e9;
-    --tertiary-color: #f0a15e;
+    --primary-color: #54abbc;
+    --primary-alt-color: #2692ab;
+    --secondary-color: #263f54;
+    --tertiary-color: #ecec6f;
+
+    --fourth-bg: #71c6a2;
+
+    --sm-font: 12px;
+    --md-font: 20px;
+    --lg-font:22px;
 }
 
-.scrolled {
-    top:-50px !important;
-    transition: .6s ease;
+.standard-text {
+    color:white;
+    font-size: var(--md-font);
+    font-weight: 500;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-strong {
-    font-weight: 600;
-}
-
-.btn-custom {
-    border-radius: 50px !important;
-}
-
-.px-10 {
-    padding-left: 100px !important;
-    padding-right: 100px !important;
-}
-
-.pt-10 {
-    padding-top: 200px !important;
-}
-
-.navbar.navbar-light {
-    background-color: var(--primary-color) !important;
-    transition: .6s ease;
-    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
-}
-
-.logo-container {
-    position: absolute;
-    z-index: 10;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+nav {
     /* border:1px solid red; */
-    height: 150px;
-    width: 150px;
-}
-
-.topbar {
     position: absolute;
-    top:0px;
+    top:0;
     left:0;
-    width: 100vw;
-    background-color: var(--tertiary-color) !important;
-}
-
-.carousel-container {
-    border:1px solid red;
-    height: 50px;
-}
-
-.logo-container img{
-    height: 100%;
+    height: 180px;
     width: 100%;
-    overflow: hidden;
-    object-fit: contain;
-}
-
-.carousel-item img {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-}
-
-.hero-carousel {
-    height: 80vh;
-}
-
-section {
-    height: 100vh;
-    width: 100%;
-}
-
-.hero-section {
-    background-color: var(--primary-color);
-}
-
-.testimonial {
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
-}
-
-.new-section {
-    height: 100vh;
-    background-color: white;
-}
-
-.last-section {
-    height: 80vh;
     background-color: var(--secondary-color);
 }
 
-.card {
-    height: 600px !important;
+nav ul, ol {
+    margin: 0;          
+    padding: 0;        
+    list-style: none;   
 }
 
-.custom-card {
+nav li {
+    margin: 0;         
+    padding: 0;        
+}
+
+li a {
+    color: var(--tertiary-color);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 3px 10px;
+    padding-bottom: 5px;
+    border: 3px solid var(--tertiary-color);
+    transition: .5s ease;
+}
+
+li a:hover {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    transition: .5s ease;
+}
+
+.promo_container {
     /* border:1px solid red; */
-    height: 50vh;
-    min-width: 24vw;
-    padding:10px;
-    border-right: 1px solid black;
+    width: 200px;
+    background-image: url(../assets/manips.png);
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    transition: .3s ease;
 }
 
-
-.custom-card__header-img {
-    height: 30vh;
-    width: 21vw;
-    /* border: 1px solid red; */
+.promo_container:hover {
+    filter: brightness(.8);
+    transition: .5s ease;
 }
 
-.custom-card__header-img img{
+section {
+    height: 120vh;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.second-section {
+    height: 70vh;
+    background-color: var(--fourth-bg);
+}
+
+.container-custom {
+    width: 1690px;
+}
+
+.mt-10 {
+    margin-top: 120px;
+}
+
+.game-card {
+    min-height: 300px;
+    min-width: 350px;
+    max-width: 400px;
+    background-color: var(--primary-alt-color);
+}
+
+.game-card-sm {
+    min-height: 300px;
+    max-width: 322px;
+    background-color: var(--primary-alt-color);
+}
+
+.img-container {
+    width: 100%;
+    height: 250px;
+    padding:3px
+}
+
+.img-container img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
-}
-
-.custom-card__footer-title {
-    width: 100%;
-}
-
-.upright {
-    text-orientation:sideways;
-    writing-mode: vertical-lr;
-}
-
-.slide-controls {
-    height: 70px;
-   padding:20px;
-   background-color: white;
-   border:0px;
-   border-radius: 10px;
-   box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
 }
