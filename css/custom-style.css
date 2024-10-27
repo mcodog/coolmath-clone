@@ -169,8 +169,9 @@ footer {
     background-color: transparent;
 }
 .canvas-container-2 {
+    /* border: 1px solid red; */
+    margin-top: -40px;
     position: absolute;
-    bottom:0;
     overflow: hidden;
     background-color: transparent;
 }
