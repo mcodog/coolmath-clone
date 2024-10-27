@@ -35,10 +35,13 @@
       </div>
     </div>
     <div class="promo_container">
-      <a title ="Manipulatives" class="promo_image" href="/manipulatives"></a>
+      <a title="Manipulatives" class="promo_image" href="/manipulatives"></a>
     </div>
   </nav>
-
+  <div class="canvas-container">
+    <canvas id="waveCanvas" width="2300" height="50"></canvas>
+    <script src="./js/wave.js"></script>
+  </div>
   <section class="d-flex justify-content-center align-items-center flex-column">
     <div class="mt-10 container-custom header-container d-flex justify-content-between">
       <img src="https://www.coolmath4kids.com/themes/custom/coolmath4kids/images/homepage_mathgames_title.png" alt="">
@@ -47,85 +50,113 @@
     <div class="mt-2 flex-wrap container-custom cards-container gap-2 d-flex justify-content-around ">
       <div class="game-card">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Grand-Prix-Multiplication.png?itok=4ZYkNAqU" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Grand-Prix-Multiplication.png?itok=4ZYkNAqU"
+            alt="">
         </div>
         <div class="standard-text m-2">Grand Prix Multiplication</div>
       </div>
       <div class="game-card">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Alien-Addition-2.png?itok=VTb0tNm_" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Alien-Addition-2.png?itok=VTb0tNm_"
+            alt="">
         </div>
         <div class="standard-text m-2">Alien Addition</div>
       </div>
       <div class="game-card">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Demolition-Division.png?itok=Eo3uNDXa" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Demolition-Division.png?itok=Eo3uNDXa"
+            alt="">
         </div>
         <div class="standard-text m-2">Demolition Division</div>
       </div>
       <div class="game-card">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Island-Chase-Subtraction.png?itok=KnDvPCNW" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Island-Chase-Subtraction.png?itok=KnDvPCNW"
+            alt="">
         </div>
         <div class="standard-text m-2">Island Chase</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Dirt-Bike-Comparing-Fractions2.png?itok=sfi-wucG" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Dirt-Bike-Comparing-Fractions2.png?itok=sfi-wucG"
+            alt="">
         </div>
         <div class="standard-text m-2">Dirt Bike Fractions</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Dolphin-Feed.png?itok=-Jnci9PW" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Dolphin-Feed.png?itok=-Jnci9PW"
+            alt="">
         </div>
         <div class="standard-text m-2">Dolphin Feed</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Jet-Ski-Addition.png?itok=8quNh4VX" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Jet-Ski-Addition.png?itok=8quNh4VX"
+            alt="">
         </div>
         <div class="standard-text m-2">Jet Ski Addition</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Minus-Mission.png?itok=lUq_AYje" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Minus-Mission.png?itok=lUq_AYje"
+            alt="">
         </div>
         <div class="standard-text m-2">Minus Mission</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Orbit-Integers.png?itok=NzkdrwRA" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Orbit-Integers.png?itok=NzkdrwRA"
+            alt="">
         </div>
         <div class="standard-text m-2">Orbit Integers</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Canoe-Penguins.png?itok=WtpWKZ4r" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Canoe-Penguins.png?itok=WtpWKZ4r"
+            alt="">
         </div>
         <div class="standard-text m-2">Canoe Penguins</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Tractor-Multiplication.png?itok=aHNp7Dle" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Tractor-Multiplication.png?itok=aHNp7Dle"
+            alt="">
         </div>
         <div class="standard-text m-2">Tractor Multiplication</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Tugboat-Addition.png?itok=xKVQqKMZ" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Tugboat-Addition.png?itok=xKVQqKMZ"
+            alt="">
         </div>
         <div class="standard-text m-2">Tugboat Addition</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/canoe-puppies.png?itok=bRgEXHKU" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/canoe-puppies.png?itok=bRgEXHKU"
+            alt="">
         </div>
         <div class="standard-text m-2">Canoe Puppies</div>
       </div>
       <div class="game-card-sm">
         <div class="img-container">
-          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Integer-Warp.png?itok=wmlTrK5R" alt="">
+          <img
+            src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Integer-Warp.png?itok=wmlTrK5R"
+            alt="">
         </div>
         <div class="standard-text m-2">Integer Warp
         </div>
@@ -134,14 +165,93 @@
   </section>
 
   <section class="second-section d-flex justify-content-center align-items-center flex-column">
-    <div class="mt-10 container-custom header-container d-flex justify-content-between">
+    <div class="mt-1 container-custom header-container d-flex justify-content-between">
       <img src="https://www.coolmath4kids.com/themes/custom/coolmath4kids/images/title_topics.png" alt="">
       <span class="standard-text text-uppercase align-items-center">See All Games ></span>
     </div>
-    <div class="mt-2 flex-wrap container-custom cards-container gap-2 d-flex justify-content-around ">
-      
+    <div class="mt-4 flex-wrap container-custom cards-container gap-2 d-flex justify-content-around ">
+      <div class="topic-card">
+        <img src="https://www.coolmath4kids.com/sites/default/files/Addition_0.png" alt="">
+      </div>
+      <div class="topic-card">
+        <img src="https://www.coolmath4kids.com/sites/default/files/Subtraction.png" alt="">
+      </div>
+      <div class="topic-card">
+        <img src="https://www.coolmath4kids.com/sites/default/files/Multiplication_0.png" alt="">
+      </div>
+      <div class="topic-card">
+        <img src="https://www.coolmath4kids.com/sites/default/files/Division_0.png" alt="">
+      </div>
+      <div class="topic-card">
+        <img src="https://www.coolmath4kids.com/sites/default/files/Fraction.png" alt="">
+      </div>
     </div>
   </section>
+
+  <section class="third-section d-flex justify-content-center align-items-center flex-column">
+    <div class="mt-1 container-custom header-container d-flex justify-content-between">
+      <img src="https://www.coolmath4kids.com/themes/custom/coolmath4kids/images/brainteasers_title.png" alt="">
+      <span class="standard-text text-uppercase align-items-center">See All Games ></span>
+    </div>
+    <div class="mt-4 flex-wrap container-custom cards-container gap-2 d-flex justify-content-around ">
+      <div class="teaser-card d-flex flex-column align-items-center">
+        <img
+          src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_brain_teaser_landing_page/public/brain_teaser/Penny-Triangle-Icon.png?itok=o77juxn3"
+          alt="">
+        <div class="mt-2 teaser-title">Penny Triangle</div>
+        <div class="teaser-description standard-text">Can you move just THREE pennies & flip this triangle upside down?</div>
+      </div>
+      <div class="teaser-card d-flex flex-column align-items-center">
+        <img
+          src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_brain_teaser_landing_page/public/brain_teaser/bt2.png?itok=8NbfnaJR"
+          alt="">
+        <div class="mt-2 teaser-title">Toothpick Squares</div>
+        <div class="teaser-description standard-text">Can you move just TWO toothpicks and create SEVEN squares?</div>
+      </div>
+      <div class="teaser-card d-flex flex-column align-items-center">
+        <img
+          src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_brain_teaser_landing_page/public/brain_teaser/bt5.png?itok=tinniUyi"
+          alt="">
+        <div class="mt-2 teaser-title">Handshake Puzzle</div>
+
+        <div class="teaser-description standard-text">If each person shakes hands with every other person exactly once...</div>
+      </div>
+      <div class="teaser-card d-flex flex-column align-items-center">
+        <img
+          src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_brain_teaser_landing_page/public/brain_teaser/bt9.png?itok=B8AIv50D"
+          alt="">
+        <div class="mt-2 teaser-title">The Painted Cube</div>
+
+        <div class="teaser-description standard-text">How many of the little cubes get painted?
+        </div>
+      </div>
+      <div class="teaser-card d-flex flex-column align-items-center">
+        <img
+          src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_brain_teaser_landing_page/public/brain_teaser/bt10.png?itok=dkxJ4523"
+          alt="">
+        <div class="mt-2 teaser-title">Sticky Shapes</div>
+
+        <div class="teaser-description standard-text">Can you find which symbols match up with the numbers?</div>
+      </div>
+    </div>
+  </section>
+  <div class="canvas-container-2">
+    <canvas id="waveCanvas2" width="2300" height="100"></canvas>
+    <script src="./js/wave2.js"></script>
+  </div>
+  <footer class="d-flex flex-column align-items-center justify-content-center gap-2">
+    <div class="footer-nav d-flex gap-5">
+      <div class="nav-item">About Us</div>
+      <div class="nav-item">Copyright</div>
+      <div class="nav-item">Privacy Policy</div>
+    </div>
+    <div class="copyright-guideline">
+      If you believe that your own copyrighted content is on our Site without your permission, please follow the Copyright Infringement Notice Procedure.
+    </div>
+    <div class="rights">
+      Ⓒ 2019 Coolmath.com LLC. All Rights Reserved.
+    </div>
+  </footer>
 </body>
 
 </html>
