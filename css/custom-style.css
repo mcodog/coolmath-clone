@@ -5,10 +5,12 @@
     --tertiary-color: #ecec6f;
 
     --fourth-bg: #71c6a2;
+    --fifth-bg: #7eb4c4;
 
     --sm-font: 12px;
     --md-font: 20px;
     --lg-font:22px;
+    --xl-font:28px;
 }
 
 .standard-text {
@@ -81,6 +83,11 @@ section {
     background-color: var(--fourth-bg);
 }
 
+.third-section {
+    height: 70vh;
+    background-color: var(--fifth-bg);
+}
+
 .container-custom {
     width: 1690px;
 }
@@ -108,9 +115,62 @@ section {
     padding:3px
 }
 
-.img-container img {
+.img-container img, .topic-card img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
+}
+
+.topic-card {
+    height: 350px;
+    width: 250px;
+    border-radius: 20px;
+    /* padding:20px; */
+    /* border:1px solid red; */
+}
+
+.teaser-card {
+    /* border:1px solid red; */
+    height: 300px;
+    width: 300px;
+}
+
+.teaser-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.teaser-card .teaser-title {
+    font-size: var(--xl-font);
+    font-weight: 500;
+    color: var(--tertiary-color)
+}
+
+footer {
+    height: 30vh;
+    background-color: var(--secondary-color);
+    width: 100%;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.nav-item {
+    font-size: var(--md-font);
+    font-weight: 700;
+}
+
+.canvas-container {
+    position: absolute;
+    top:150px;
+    overflow: hidden;
+    background-color: transparent;
+}
+.canvas-container-2 {
+    position: absolute;
+    bottom:0;
+    overflow: hidden;
+    background-color: transparent;
 }
