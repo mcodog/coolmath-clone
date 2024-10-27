@@ -2,697 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Site</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/custom-style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Site</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/custom-style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light fixed-top px-5">
-        <div class="topbar bg-primary d-none d-lg-block w-100 px-5 py-2">
-            <div class="d-flex justify-content-between">
-                <div class="top-info ps-2">
-                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">123 Street, New York</a></small>
-                    <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
-                </div>
-                <div class="top-link pe-2">
-                    <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                    <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
-                    <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid mt-5">
-            <a class="navbar-brand" href="#">
-                <h4>旅行サイト</h4>
-            </a>
-            <div class="logo-container mt-2">
-                <img src="./assets/logo.png" alt="App Logo">
-            </div>
-            <div class="d-flex gap-1">
-                <button type="button" class="btn btn-default btn-lg" onClick=openLogin()>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                        class="bi bi-person" viewBox="0 0 16 16">
-                        <path
-                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
-                    </svg>
-                </button>
-                <button type="button" class="btn btn-default btn-lg" onClick=openModal() data-toggle="modal" data-target="#cartModal">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                        class="bi bi-cart3" viewBox="0 0 16 16">
-                        <path
-                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                    </svg>
-                </button>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">旅行サイト</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-light">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success btn-custom" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <nav class="d-flex p-2 justify-content-center gap-5">
+    <img src="https://www.coolmath4kids.com/themes/custom/coolmath4kids/images/welcome_image.png" alt="Logo">
+    <div class="main-nav__line d-flex flex-column align-items-center justify-content-center gap-3">
+      <img src="https://www.coolmath4kids.com/themes/custom/coolmath4kids/images/cm4k_logo.png" alt="Logo">
+      <div class="main-line d-flex">
+        <ul class="d-flex gap-3">
+          <li>
+            <a href="/math-games" data-drupal-link-system-path="math-games">Math Games</a>
+          </li>
+          <li>
+            <a href="/math-help" data-drupal-link-system-path="math-help">Lessons</a>
+          </li>
+          <li>
+            <a href="/quizzes" title="" data-drupal-link-system-path="node/129">Quizzes</a>
+          </li>
+          <li>
+            <a href="/manipulatives" data-drupal-link-system-path="manipulatives">Manipulatives</a>
+          </li>
+          <li>
+            <a href="/more" data-drupal-link-system-path="more">More</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="promo_container">
+      <a title ="Manipulatives" class="promo_image" href="/manipulatives"></a>
+    </div>
+  </nav>
 
-    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header d-flex justify-content-between">
-              <h5 class="modal-title">Confirm reservation</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick=closeConfirm></button>
-            </div>
-            <div class="modal-body">
-              <p>Reservations are available. Please confirm to proceed to purchasing the tickets</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick=closeConfirm>Close</button>
-              <button type="button" class="btn btn-primary">Confirm</button>
-            </div>
-          </div>
+  <section class="d-flex justify-content-center align-items-center flex-column">
+    <div class="mt-10 container-custom header-container d-flex justify-content-between">
+      <img src="https://www.coolmath4kids.com/themes/custom/coolmath4kids/images/homepage_mathgames_title.png" alt="">
+      <span class="standard-text text-uppercase align-items-center">See All Games ></span>
+    </div>
+    <div class="mt-2 flex-wrap container-custom cards-container gap-2 d-flex justify-content-around ">
+      <div class="game-card">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Grand-Prix-Multiplication.png?itok=4ZYkNAqU" alt="">
+        </div>
+        <div class="standard-text m-2">Grand Prix Multiplication</div>
+      </div>
+      <div class="game-card">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Alien-Addition-2.png?itok=VTb0tNm_" alt="">
+        </div>
+        <div class="standard-text m-2">Alien Addition</div>
+      </div>
+      <div class="game-card">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Demolition-Division.png?itok=Eo3uNDXa" alt="">
+        </div>
+        <div class="standard-text m-2">Demolition Division</div>
+      </div>
+      <div class="game-card">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_firstview/public/game/Island-Chase-Subtraction.png?itok=KnDvPCNW" alt="">
+        </div>
+        <div class="standard-text m-2">Island Chase</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Dirt-Bike-Comparing-Fractions2.png?itok=sfi-wucG" alt="">
+        </div>
+        <div class="standard-text m-2">Dirt Bike Fractions</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Dolphin-Feed.png?itok=-Jnci9PW" alt="">
+        </div>
+        <div class="standard-text m-2">Dolphin Feed</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Jet-Ski-Addition.png?itok=8quNh4VX" alt="">
+        </div>
+        <div class="standard-text m-2">Jet Ski Addition</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Minus-Mission.png?itok=lUq_AYje" alt="">
+        </div>
+        <div class="standard-text m-2">Minus Mission</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Orbit-Integers.png?itok=NzkdrwRA" alt="">
+        </div>
+        <div class="standard-text m-2">Orbit Integers</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Canoe-Penguins.png?itok=WtpWKZ4r" alt="">
+        </div>
+        <div class="standard-text m-2">Canoe Penguins</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Tractor-Multiplication.png?itok=aHNp7Dle" alt="">
+        </div>
+        <div class="standard-text m-2">Tractor Multiplication</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Tugboat-Addition.png?itok=xKVQqKMZ" alt="">
+        </div>
+        <div class="standard-text m-2">Tugboat Addition</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/canoe-puppies.png?itok=bRgEXHKU" alt="">
+        </div>
+        <div class="standard-text m-2">Canoe Puppies</div>
+      </div>
+      <div class="game-card-sm">
+        <div class="img-container">
+          <img src="https://www.coolmath4kids.com/sites/default/files/styles/thumbnail_mathgames_secondview/public/game/Integer-Warp.png?itok=wmlTrK5R" alt="">
+        </div>
+        <div class="standard-text m-2">Integer Warp
         </div>
       </div>
+    </div>
+  </section>
 
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header d-flex justify-content-between">
-              <h5 class="modal-title">Log In</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick=closeConfirm></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Remember Me</label>
-                    </div>
-                  </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick=closeConfirm>Close</button>
-              <button type="button" class="btn btn-primary">Log In</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header border-bottom-0 d-flex justify-content-between">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Your Shopping Cart
-              </h5>
-              <button type="button" class="close p-2" data-dismiss="modal" aria-label="Close" onClick=closeModal()>
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <table class="table table-image">
-                <thead>
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Product</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Qty</th>
-                    <th scope="col">Total</th>
-                    <th scope="col">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="w-25">
-                      <img src="./assets/img1.jpg" class="img-fluid img-thumbnail" alt="Sheep">
-                    </td>
-                    <td>Tickets to Tokyo, Japan</td>
-                    <td>89$</td>
-                    <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-                    <td>178$</td>
-                    <td>
-                      <a href="#" class="btn btn-danger btn-sm">
-                        <i class="fa fa-times"></i>
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table> 
-              <div class="d-flex justify-content-end">
-                <h5>Total: <span class="price text-success">89$</span></h5>
-              </div>
-            </div>
-            <div class="modal-footer border-top-0 d-flex justify-content-between">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick=closeModal()>Close</button>
-              <button type="button" class="btn btn-success" onClick=closeModal()>Checkout</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    <section class="hero-section p-5">
-        <div class="carousel-container mt-5">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="hero-carousel carousel-item active">
-                        <img src="./assets/img2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="hero-carousel carousel-item">
-                        <img src="./assets/img3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="hero-carousel carousel-item">
-                        <img src="./assets/img4.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            <div class="container-fluid d-flex justify-content-center mt-5">
-                <button type="button" class="btn btn-dark p-3 px-10" onClick=confirmModal()>Book Now!</button>
-            </div>
-        </div>
-    </section>
-    <section class="new-section flex-column d-flex align-items-center gap-5">
-        <div class="header-container d-flex flex-column justify-content-between align-items-center pt-5">
-            <h6>A Gift With A Story</h6>
-            <h1 class="display-1">
-                <strong>What's New?</strong>
-            </h1>
-            <h4>
-                <strong>ストーリーのあるギフト</strong>
-            </h4>
-        </div>
-        <div class="d-flex">
-            <div id="carouselExampleAutoplaying2" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="deck d-block w-100">
-                            <div class="d-flex">
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img5.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img6.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img8.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img9.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="deck d-block w-100">
-                            <div class="d-flex">
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img10.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img1.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img2.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img3.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="deck d-block w-100">
-                            <div class="d-flex">
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img4.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img5.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img6.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="custom-card d-flex flex-column justify-content-around">
-                                    <div class="custom-card__header d-flex gap-2">
-                                        <div class="custom-card__header-text">
-                                            <h6 class="upright">22/10/2024</h6>
-                                        </div>
-                                        <div class="custom-card__header-img">
-                                            <img src="./assets/img7.jpg" alt="Travel Spot">
-                                        </div>
-                                    </div>
-                                    <div class="custom-card__footer">
-                                        <div
-                                            class="custom-card__footer-title d-flex flex-column justify-content-center align-items-center">
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                            <h3><strong>ストーリーのあるギフト</strong></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying2"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying2"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-        <div class="container d-flex justify-content-center gap-5 w-25 h-25 mt-5">
-            <button class="slide-controls" data-bs-target="#carouselExampleAutoplaying2"
-            data-bs-slide="prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-                </svg>
-            </button>
-            <button class="slide-controls" data-bs-target="#carouselExampleAutoplaying2"
-            data-bs-slide="next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                </svg>
-            </button>
-        </div>
-    </section>
-    <section class="last-section pt-5 d-flex flex-column justify-content-center align-items-center">
-        <div class="row d-flex justify-content-center mx-2">
-            <div class="col-md-10 col-xl-8 text-center mx-2">
-              <h1 class="display-2 mb-4"><strong>Testimonials</strong></h1>
-              <p class="mb-4 pb-2 mb-md-5 pb-md-0">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
-                numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
-                quisquam eum porro a pariatur veniam.
-              </p>
-            </div>
-          </div>
-        
-          <div class="row text-center mt-5 w-75 gap-5 d-flex flex-nowrap justify-content-between">
-            <div class="testimonial col-md-4 mb-5 mb-md-0 p-5">
-              <div class="d-flex justify-content-center mb-4">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                  class="rounded-circle shadow-1-strong" width="150" height="150" />
-              </div>
-              <h5 class="mb-3">Maria Smantha</h5>
-              <h6 class="text-primary mb-3">Web Developer</h6>
-              <p class="px-xl-3">
-                <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-                tenetur.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center mb-0">
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star-half-alt fa-sm text-warning"></i>
-                </li>
-              </ul>
-            </div>
-            <div class="testimonial col-md-4 mb-5 mb-md-0">
-              <div class="d-flex justify-content-center mb-4 p-5">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
-                  class="rounded-circle shadow-1-strong" width="150" height="150" />
-              </div>
-              <h5 class="mb-3">Lisa Cudrow</h5>
-              <h6 class="text-primary mb-3">Graphic Designer</h6>
-              <p class="px-xl-3">
-                <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center mb-0">
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-              </ul>
-            </div>
-            <div class="testimonial col-md-4 mb-0">
-              <div class="d-flex justify-content-center mb-4 p-5">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
-                  class="rounded-circle shadow-1-strong" width="150" height="150" />
-              </div>
-              <h5 class="mb-3">John Smith</h5>
-              <h6 class="text-primary mb-3">Marketing Specialist</h6>
-              <p class="px-xl-3">
-                <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio
-                dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center mb-0">
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
-                </li>
-                <li>
-                  <i class="far fa-star fa-sm text-warning"></i>
-                </li>
-              </ul>
-            </div>
-          </div>
-    </section>
-    <div class="container">
-        <footer class="py-5">
-          <div class="row">
-            <div class="col-6 col-md-2 mb-3">
-              <h5>Section</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-              </ul>
-            </div>
+  <section class="second-section d-flex justify-content-center align-items-center flex-column">
+    <div class="mt-10 container-custom header-container d-flex justify-content-between">
+      <img src="https://www.coolmath4kids.com/themes/custom/coolmath4kids/images/title_topics.png" alt="">
+      <span class="standard-text text-uppercase align-items-center">See All Games ></span>
+    </div>
+    <div class="mt-2 flex-wrap container-custom cards-container gap-2 d-flex justify-content-around ">
       
-            <div class="col-6 col-md-2 mb-3">
-              <h5>Section</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-              </ul>
-            </div>
-      
-            <div class="col-6 col-md-2 mb-3">
-              <h5>Section</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-              </ul>
-            </div>
-      
-            <div class="col-md-5 offset-md-1 mb-3">
-              <form>
-                <h5>Subscribe to our newsletter</h5>
-                <p>Monthly digest of what's new and exciting from us.</p>
-                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email address</label>
-                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                  <button class="btn btn-primary" type="button">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-      
-          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>&copy; 2024 Company, Inc. All rights reserved.</p>
-            <ul class="list-unstyled d-flex">
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-            </ul>
-          </div>
-        </footer>
-      </div>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        function handleScroll() {
-            const topbar = document.querySelector('.navbar');
-            const scrolled = window.scrollY > 0;
-            if (scrolled) {
-                console.log("Page has been scrolled");
-                topbar.classList.add('scrolled');
-            } else {
-
-                console.log("Page is at the top");
-                topbar.classList.remove('scrolled');
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll);
-
-        function openModal() {
-            $('#cartModal').modal('show');
-        }
-
-        function closeModal() {
-            $('#cartModal').modal('hide');
-        }
-
-        function confirmModal() {
-            $('#confirmationModal').modal('show');
-        }
-
-        function closeConfirm() {
-            $('#confirmationModal').modal('hide');
-        }
-
-        function openLogin() {
-            $('#loginModal').modal('show');
-        }
-
-        function closeLogin() {
-            $('#loginModal').modal('hide');
-        }
-        
-    </script>
-    
+    </div>
+  </section>
 </body>
 
 </html>
