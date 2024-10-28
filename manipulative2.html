@@ -7,6 +7,7 @@
   <title>Elementary Website</title>
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/custom-style.css">
+  <link rel="stylesheet" href="./css/game2.css">
 </head>
 
 <body>
@@ -17,10 +18,10 @@
       <div class="main-line d-flex">
         <ul class="d-flex gap-3">
           <li>
-            <a href="./index.html" >Math Games</a>
+            <a href="./index.html">Math Games</a>
           </li>
           <li>
-            <a href="./lessons.html" >Lessons</a>
+            <a href="./lessons.html">Lessons</a>
           </li>
           <li>
             <a href="./quizzes.html" title="">Quizzes</a>
@@ -45,38 +46,25 @@
 
   <section class=" d-flex justify-content-center align-items-center flex-column">
     <div class="backdrop-stars">
-      <img class="size-5" src="./assets/giphy.gif" alt=""><img class="size-2" src="./assets/giphy.gif" alt=""><img class="size-11" src="./assets/giphy.gif" alt=""><img class="size-12" src="./assets/giphy.gif" alt=""><img class="size-10" src="./assets/giphy.gif" alt=""><img  class="size-5" src="./assets/giphy.gif" alt=""><img class="size-2" src="./assets/giphy.gif" alt=""><img class="size-7" src="./assets/giphy.gif" alt=""><img class="size-9" src="./assets/giphy.gif" alt=""><img class="size-8" src="./assets/giphy.gif" alt="">
+      <img class="size-5" src="./assets/giphy.gif" alt=""><img class="size-2" src="./assets/giphy.gif" alt=""><img
+        class="size-11" src="./assets/giphy.gif" alt=""><img class="size-12" src="./assets/giphy.gif" alt=""><img
+        class="size-10" src="./assets/giphy.gif" alt=""><img class="size-5" src="./assets/giphy.gif" alt=""><img
+        class="size-2" src="./assets/giphy.gif" alt=""><img class="size-7" src="./assets/giphy.gif" alt=""><img
+        class="size-9" src="./assets/giphy.gif" alt=""><img class="size-8" src="./assets/giphy.gif" alt="">
     </div>
     <div class="mt-1 container-custom header-container d-flex justify-content-between">
       <img src="https://www.coolmath4kids.com/themes/custom/coolmath4kids/images/title_topics.png" alt="">
       <span class="standard-text text-uppercase align-items-center">See All Games ></span>
     </div>
-    <div class="quiz-container mt-3 ">
-      <div class="quiz-container__header w-100 d-flex justify-content-center align-items-center">
-        <img src="https://www.coolmath4kids.com/sites/default/files/practice-tool/img/subject-headers/title-select-a-quiz.png" alt="Title">
-      </div>
-      <div class="quiz-container__body d-flex justify-content-center align-items-center flex-wrap gap-5 p-2">
-        <a href="./inners/quizFocus.html">
-        <div class="quiz-selection">
-          <img src="https://www.coolmath4kids.com/sites/default/files/practice-tool/img/landing-page/addition.png" alt="">
+    <div class="container-xxl d-flex justify-content-center">
+        <div class="game-container">
+            <h1>Guess the Animal!</h1>
+            <p id="hint"></p>
+            <input type="text" id="guessInput" placeholder="Type your guess here...">
+            <button onclick="checkGuess()">Submit Guess</button>
+            <p id="feedback"></p>
+            <button id="nextButton" onclick="nextHint()">Next Hint</button>
         </div>
-      </a>
-        <a href="./inners/quizFocus.html">
-        <div class="quiz-selection">
-          <img src="https://www.coolmath4kids.com/sites/default/files/practice-tool/img/landing-page/subtraction.png" alt="">
-        </div>
-      </a>
-        <a href="./inners/quizFocus.html">
-        <div class="quiz-selection">
-          <img src="https://www.coolmath4kids.com/sites/default/files/practice-tool/img/landing-page/multiplication.png" alt="">
-        </div>
-      </a>
-        <a href="./inners/quizFocus.html">
-        <div class="quiz-selection">
-          <img src="https://www.coolmath4kids.com/sites/default/files/practice-tool/img/landing-page/division.png" alt="">
-        </div>
-      </a>
-      </div>
     </div>
   </section>
 
@@ -91,12 +79,14 @@
       <div class="nav-item">Privacy Policy</div>
     </div>
     <div class="copyright-guideline">
-      If you believe that your own copyrighted content is on our Site without your permission, please follow the Copyright Infringement Notice Procedure.
+      If you believe that your own copyrighted content is on our Site without your permission, please follow the
+      Copyright Infringement Notice Procedure.
     </div>
     <div class="rights">
       Ⓒ 2019 Coolmath.com LLC. All Rights Reserved.
     </div>
   </footer>
+  <script src="./js/game2.js"></script>
 </body>
 
 </html>
